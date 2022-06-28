@@ -7,7 +7,7 @@ class TimeHandler
     "minute" => "%M",
     "second" => "%S"
   }.freeze
-
+  
   def initialize(array_query_params)
     @array_query_params = array_query_params
   end
@@ -33,5 +33,5 @@ class TimeHandler
 
   def has_unknown_format?
     (@array_query_params - TIME_FORMATS.keys).count.positive?
-  end
+  end  
 end
