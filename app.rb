@@ -6,6 +6,8 @@ class App
     build_responce(line_to_time)
   end
 
+  private
+
   def build_responce(line_to_time)
     responce = Rack::Response.new(line_to_time.format)
     responce.status = line_to_time.has_unknown_format? ? 400 : 200
